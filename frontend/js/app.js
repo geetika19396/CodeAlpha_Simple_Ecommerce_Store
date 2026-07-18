@@ -27,6 +27,10 @@ async function loadProducts() {
                         Add To Cart
                     </button>
 
+                    <button onclick="viewProduct('${product._id}')">
+                        View Details
+                    </button>
+
                 </div>
             `;
 
@@ -44,7 +48,15 @@ loadProducts();
 
 async function addToCart(productId) {
 
-    const userId = "6a5929af434f5728b7c1b17a";
+    const loggedInUser = JSON.parse(localStorage.getItem("user"));
+
+     if (!loggedInUser) {
+    alert("Please login first!");
+    window.location.href = "login.html";
+    return;
+}
+
+const userId = loggedInUser._id;
 
     try {
 
@@ -73,5 +85,11 @@ async function addToCart(productId) {
         alert("Something went wrong!");
 
     }
+
+}
+
+function viewProduct(productId) {
+
+    window.location.href = `product.html?id=${productId}`;
 
 }

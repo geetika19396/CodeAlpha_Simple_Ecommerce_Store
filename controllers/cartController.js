@@ -2,7 +2,9 @@ const Cart = require("../models/Cart");
 
 // Add Product to Cart
 const addToCart = async (req, res) => {
+
     try {
+
         const { user, product, quantity } = req.body;
 
         const cartItem = new Cart({
@@ -16,30 +18,40 @@ const addToCart = async (req, res) => {
         res.status(201).json(savedCart);
 
     } catch (error) {
+
         res.status(500).json({
             message: error.message
         });
+
     }
+
 };
 
 // Get User Cart
 const getCart = async (req, res) => {
+
     try {
-        const cart = await Cart.find()
-            .populate("user")
+
+        const { user } = req.query;
+
+        const cart = await Cart.find({ user })
             .populate("product");
 
         res.status(200).json(cart);
 
     } catch (error) {
+
         res.status(500).json({
             message: error.message
         });
+
     }
+
 };
 
 // Remove Cart Item
 const removeFromCart = async (req, res) => {
+
     try {
 
         await Cart.findByIdAndDelete(req.params.id);
@@ -55,6 +67,7 @@ const removeFromCart = async (req, res) => {
         });
 
     }
+
 };
 
 // Update Cart Quantity

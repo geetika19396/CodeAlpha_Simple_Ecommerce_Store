@@ -1,10 +1,19 @@
 const orderContainer = document.getElementById("orderContainer");
 
+const loggedInUser = JSON.parse(localStorage.getItem("user"));
+
+if (!loggedInUser) {
+    alert("Please login first!");
+    window.location.href = "login.html";
+}
+
+const userId = loggedInUser._id;
+
 async function loadOrders() {
 
     try {
 
-        const response = await fetch("http://localhost:5000/orders");
+        const response = await fetch(`http://localhost:5000/orders?user=${userId}`);
 
         const orders = await response.json();
 
@@ -52,3 +61,12 @@ async function loadOrders() {
 }
 
 loadOrders();
+function logout() {
+
+    localStorage.removeItem("user");
+
+    alert("Logged Out Successfully!");
+
+    window.location.href = "login.html";
+
+}

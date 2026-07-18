@@ -2,13 +2,20 @@ const cartContainer = document.getElementById("cartContainer");
 
 const totalPrice = document.getElementById("totalPrice");
 
-const userId = "6a5929af434f5728b7c1b17a";
+const loggedInUser = JSON.parse(localStorage.getItem("user"));
+
+if (!loggedInUser) {
+    alert("Please login first!");
+    window.location.href = "login.html";
+}
+
+const userId = loggedInUser._id;
 
 async function loadCart() {
 
     try {
 
-        const response = await fetch("http://localhost:5000/cart");
+        const response = await fetch(`http://localhost:5000/cart?user=${userId}`);
 
         const cartItems = await response.json();
        
@@ -125,7 +132,7 @@ async function placeOrder() {
 
     try {
 
-        const response = await fetch("http://localhost:5000/cart");
+        const response = await fetch(`http://localhost:5000/cart?user=${userId}`);
         const cartItems = await response.json();
 
         let products = [];
@@ -141,6 +148,10 @@ async function placeOrder() {
             totalAmount += item.product.price * item.quantity;
 
         });
+
+        console.log(products);
+        console.log(totalAmount);
+        console.log(userId);
 
         const orderResponse = await fetch("http://localhost:5000/orders", {
 
