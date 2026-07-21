@@ -11,12 +11,14 @@ async function loadProduct() {
         const response = await fetch(`http://localhost:5000/products/${productId}`);
 
         const product = await response.json();
+        console.log(product);
+        console.log(product.image);
 
         productDetails.innerHTML = `
 
         <div class="card">
 
-            <img src="${product.image}" width="250">
+        <img src="http://localhost:5000${product.image}" width="250" alt="${product.name}">
 
             <h2>${product.name}</h2>
 

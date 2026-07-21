@@ -13,21 +13,28 @@ const userId = loggedInUser._id;
 
 async function loadCart() {
 
+    console.log("loadCart function started");
+    console.log("User ID:", userId);
+
     try {
 
         const response = await fetch(`http://localhost:5000/cart?user=${userId}`);
 
         const cartItems = await response.json();
+
+        console.log(cartItems);
        
         cartContainer.innerHTML = "";
         let total = 0;
 
         cartItems.forEach(item => {
 
+             console.log(item.product.image);
+
             cartContainer.innerHTML += `
                 <div class="card">
 
-                    <img src="${item.product.image}" alt="${item.product.name}">
+                    <img src="http://localhost:5000${item.product.image}" alt="${item.product.name}">
 
                     <h3>${item.product.name}</h3>
 

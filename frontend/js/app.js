@@ -15,7 +15,7 @@ async function loadProducts() {
             productContainer.innerHTML += `
                 <div class="card">
 
-                    <img src="${product.image}" alt="${product.name}">
+                    <img src="http://localhost:5000${product.image}" alt="${product.name}">
 
                     <h3>${product.name}</h3>
 

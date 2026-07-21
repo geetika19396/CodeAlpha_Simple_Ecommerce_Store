@@ -26,11 +26,19 @@ async function loadOrders() {
             order.products.forEach(item => {
 
                 productsHTML += `
+                   <div style="margin-bottom:20px; text-align:center;">
+
+                   <img src="http://localhost:5000${item.product.image}" alt="${item.product.name}" width="150">
+
+
                     <p>
+        
                         <strong>${item.product.name}</strong>
                         (Qty: ${item.quantity})
                     </p>
-                `;
+
+            </div>
+        `;
 
             });
 
