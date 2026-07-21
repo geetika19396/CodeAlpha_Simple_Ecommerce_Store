@@ -121,12 +121,17 @@ CodeAlpha_Ecommerce_Store
 ### Clone Repository
 
 ```bash
-git clone git clone https://github.com/geetika19396/CodeAlpha_Simple_Ecommerce_Store.git
+git clone https://github.com/geetika19396/CodeAlpha_Simple_Ecommerce_Store.git
 ```
 
 ---
 
-### Go to Project Folder cd CodeAlpha_Simple_Ecommerce_Store
+
+### Go to Project Folder 
+
+```bash
+cd CodeAlpha_Simple_Ecommerce_Store
+```
 
 
 ### Install Dependencies
