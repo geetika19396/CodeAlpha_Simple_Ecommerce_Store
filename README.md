@@ -1,4 +1,4 @@
-# 🛒 CodeAlpha E-Commerce Store
+# 🛒 CodeAlpha Simple E-Commerce Store 
 
 A Full Stack E-Commerce Web Application developed as part of the **CodeAlpha Full Stack Development Internship**.
 
