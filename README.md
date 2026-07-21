@@ -1,10 +1,12 @@
-# 🛒 CodeAlpha Simple E-Commerce Store 
+# 🛒 CodeAlpha Simple E-Commerce Store
 
 A Full Stack E-Commerce Web Application developed as part of the **CodeAlpha Full Stack Development Internship**.
 
 This project allows users to register, login, browse products, view product details, add items to the shopping cart, manage quantities, place orders, view order history, and logout securely using a **Node.js + Express.js** backend with **MongoDB Atlas**.
 
 ---
+
+
 
 # 🚀 Features
 
@@ -25,23 +27,28 @@ This project allows users to register, login, browse products, view product deta
 
 ---
 
+
 # 🛠️ Tech Stack
+---
 
 ## Frontend
 
 - HTML5
 - CSS3
 - JavaScript
+---
 
 ## Backend
 
 - Node.js
 - Express.js
+---
 
 ## Database
 
 - MongoDB Atlas
 - Mongoose
+---
 
 ## Tools
 
@@ -50,12 +57,11 @@ This project allows users to register, login, browse products, view product deta
 - GitHub
 - Postman
 - Live Server
-
 ---
+
 
 # 📁 Project Structure
 
-```text
 CodeAlpha_Ecommerce_Store
 │
 ├── controllers/
@@ -104,54 +110,49 @@ CodeAlpha_Ecommerce_Store
 ├── package-lock.json
 ├── .gitignore
 └── README.md
-```
 
 ---
 
+
+
 # ⚙️ Installation
+---
 
 ### Clone Repository
 
-```bash
+
 git clone https://github.com/geetika19396/CodeAlpha_Ecommerce_Store.git
-```
 
 ### Go to Project Folder
-
-```bash
 cd CodeAlpha_Ecommerce_Store
-```
+
 
 ### Install Dependencies
 
-```bash
 npm install
-```
+
 
 ### Create .env File
 
-```env
+
 MONGO_URI=your_mongodb_connection_string
 PORT=5000
-```
+
 
 ### Run Backend
 
-```bash
 node index.js
-```
+
 
 ### Run Frontend
 
 Open
 
-```
 frontend/index.html
-```
 
 using **Live Server**.
-
 ---
+
 
 # 📌 Project Modules
 
@@ -169,6 +170,8 @@ using **Live Server**.
 - Logout
 
 ---
+
+
 
 # 📚 REST API Endpoints
 
@@ -246,8 +249,7 @@ Through this project I learned:
 GitHub:
 https://github.com/geetika19396
 
-Repository:
-https://github.com/geetika19396/CodeAlpha_Ecommerce_Store
+Repository:https://github.com/geetika19396/CodeAlpha_Simple_Ecommerce_Store.git 
 
 ---
 
