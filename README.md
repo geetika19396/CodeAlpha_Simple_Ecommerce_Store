@@ -7,7 +7,6 @@ This project allows users to register, login, browse products, view product deta
 ---
 
 
-
 # 🚀 Features
 
 - 👤 User Registration
@@ -29,26 +28,25 @@ This project allows users to register, login, browse products, view product deta
 
 
 # 🛠️ Tech Stack
----
 
 ## Frontend
 
 - HTML5
 - CSS3
 - JavaScript
----
+
 
 ## Backend
 
 - Node.js
 - Express.js
----
+
 
 ## Database
 
 - MongoDB Atlas
 - Mongoose
----
+
 
 ## Tools
 
@@ -57,11 +55,13 @@ This project allows users to register, login, browse products, view product deta
 - GitHub
 - Postman
 - Live Server
+
 ---
 
-```text
+
 # 📁 Project Structure
 
+```
 CodeAlpha_Ecommerce_Store
 │
 ├── controllers/
@@ -111,44 +111,52 @@ CodeAlpha_Ecommerce_Store
 ├── .gitignore
 └── README.md
 
+``` 
+
 ---
-
-
 
 # ⚙️ Installation
----
+
 
 ### Clone Repository
 
-
+```bash
 git clone git clone https://github.com/geetika19396/CodeAlpha_Simple_Ecommerce_Store.git
+```
+
+---
 
 ### Go to Project Folder cd CodeAlpha_Simple_Ecommerce_Store
 
 
 ### Install Dependencies
 
+```bash
 npm install
+```
 
 
 ### Create .env File
 
-
+```bash
 MONGO_URI=your_mongodb_connection_string
 PORT=5000
-
+```
 
 ### Run Backend
 
+```bash
 node index.js
+```
 
 
 ### Run Frontend
 
 Open
 
+```bash
 frontend/index.html
-
+```
 using **Live Server**.
 ---
 
